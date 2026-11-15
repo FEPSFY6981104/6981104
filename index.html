@@ -79,7 +79,7 @@
     </tr>
         
     <tr>
-        <td><a href="References">References</td>
+        <td><a href="#References">References</td>
     </tr>
     </table>
         
@@ -162,8 +162,8 @@
 </button>
 <script>
     async function getLastUpdatedTime() {
-        const username = 'nr0025';
-        const repo = 'FY0025';
+        const username = 'FEPSFY6981104';
+        const repo = '6981104';
        
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
         try {
@@ -222,10 +222,15 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const IntroductionCount = displayWordCount("#Introduction");
+    const AbstractCount = displayWordCount("#Abstract");
+    const WhatIsaTurbochargerCount = displayWordCount("#What Is a Turbocharger?";
+    const HowDoesaTurbochargeWorkCount = displayWordCount("#How Does a Turbocharger Work?");
+    const AdvantagesofTurbochargingCount = displayWordCount("#Advantages of Turbocharging");
+    const DisadvantagesandEngineeringChallengesCount = displayWordCount("#Disadvantages and Engineering Challenges");
+    const ReferencesCount = displayWordCount("#References");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount; + AbstractCount; + WhatIsaTurbochargerCount; + HowDoesaTurbochargeWorkCount; + AdvantagesofTurbochargingCount; + DisadvantagesandEngineeringChallengesCount; + ReferencesCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
