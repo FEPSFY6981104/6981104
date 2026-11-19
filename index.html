@@ -69,30 +69,6 @@
 </tr>
 
 <tr>
-    <td style="padding-left: 30px;">
-        <a href="#What-Is-a-Turbocharger">What Is a Turbocharger?</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding-left: 30px;">
-        <a href="#How-Does-a-Turbocharger-Work">How Does a Turbocharger Work?</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding-left: 30px;">
-        <a href="#Advantages-of-Turbocharging">Advantages of Turbocharging</a>
-    </td>
-</tr>
-
-<tr>
-    <td style="padding-left: 30px;">
-        <a href="#Disadvantages-and-Engineering-Challenges">Disadvantages and Engineering Challenges</a>
-    </td>
-</tr>
-
-<tr>
     <td><a href="#References">References</a></td>
 </tr>
         
@@ -123,26 +99,10 @@
         engine performance. It will explain the main components of a turbocharger and evaluate its
         advantages and disadvantages.
         </pre>
-    <h2>Analysis and Discussion</h2>
         
-    <h3 id="What Is a Turbocharger?">What Is a Turbocharger?</h3>
-        <pre id="Turbocharger_InText" class="ex1">
-            Explain the components
-        </pre>
-    
-    <h3 id="How Does a Turbocharger Work?">How Does a Turbocharger Work?</h3>
-        <pre id="HowItWorks_InText" class="ex1">
-            Explain how it works
-        </pre>
+    <h3>Analysis and Discussion</h3>
+        <pre id="Analysis_InText" class="ex1">
 
-    <h3 id="Advantages of Turbocharging">Advantages of Turbocharging</h3>
-        <pre id="Advantages_InText" class="ex1">
-        ADd the Table
-        </pre>
-
-    <h2 id="Disadvantages and Engineering Challenges">Disadvantages and Engineering Challenges</h2>
-        <pre id="Disadvantages_InText" class="ex1">
-            Disadvantagesssss
         </pre>
         
     <h3 id="References">References</h3>
@@ -227,14 +187,10 @@
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AbstractCount = displayWordCount("Abstract_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-    const TurbochargerCount = displayWordCount("Turbocharger_InText");
-    const HowItWorksCount = displayWordCount("HowItWorks_InText");
-    const AdvantagesCount = displayWordCount("Advantages_InText");
-    const DisadvantagesCount = displayWordCount("Disadvantages_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText")
     const ReferencesCount = displayWordCount("References_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AbstractCount + AnalysisCount + TurbochargerCount + HowItWorksCount + AdvantagesCount + DisadvantagesCount + ReferencesCount;
+    const totalWordCount = IntroductionCount + AbstractCount + AnalysisCount + ReferencesCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
