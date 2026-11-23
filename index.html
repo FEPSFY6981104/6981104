@@ -32,6 +32,16 @@
         tr:nth-child(even) {
             background-color: #dddddd;
         }
+
+        table-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+        
+        .table-container table {
+            width: 30%;
+        }
         </style>
         
         </head>
@@ -118,50 +128,85 @@
         to be burnt, allowing the engine to generate more power.
         
         </pre>
-        
-        <table id="Analysis_Table">
-            <caption>
-                Table 1: Advantages of turbocharging
-                (Source: Adapted from National Research Council, 2015).
-            </caption>
+        <div class="table-container">
+            <table id="Analysis_Table">
+                <caption>
+                    Table 1: Advantages of turbocharging
+                    (Source: Adapted from National Research Council, 2015).
+                </caption>
+                
+                <tr>
+                    <th>Advantage</th>
+                    <th>How does turbocharging achieve this?</th>
+                    <th>Benefit</th>
+                </tr>
             
-            <tr>
-                <th>Advantage</th>
-                <th>How does turbocharging achieve this?</th>
-                <th>Benefit</th>
-            </tr>
-        
-            <tr>
-                <td>Increased power output</td>
-                <td>More air inside each cylinders allows for more fuel to be burned</td>
-                <td>Greater engine power</td>
-            </tr>
-        
-            <tr>
-                <td>Increased torque</td>
-                <td>More fuel combustion increases force</td>
-                <td>Improves acceleration and pulling ability</td>
-            </tr>
-        
-            <tr>
-                <td>Engine downsizing</td>
-                <td>Smaller engine but larger power</td>
-                <td>improved power to weight/size ratio</td>
-            </tr>
-        
-            <tr>
-                <td>Improved fuel efficiency</td>
-                <td>Smaller engines use less fuel</td>
-                <td>Improved fuel economy</td>
-            </tr>
-        
-            <tr>
-                <td>Reduced Carbon-dioxide emissions</td>
-                <td>Uses less fuel, therefore less carbon-dioxide is emitted.</td>
-                <td>Reduced negative enviromental impact</td>
-            </tr>
-        
-        </table>
+                <tr>
+                    <td>Increased power output</td>
+                    <td>More air inside each cylinders allows for more fuel to be burned</td>
+                    <td>Greater engine power</td>
+                </tr>
+            
+                <tr>
+                    <td>Increased torque</td>
+                    <td>More fuel combustion increases force</td>
+                    <td>Improves acceleration and pulling ability</td>
+                </tr>
+            
+                <tr>
+                    <td>Engine downsizing</td>
+                    <td>Smaller engine but larger power</td>
+                    <td>improved power to weight/size ratio</td>
+                </tr>
+            
+                <tr>
+                    <td>Improved fuel efficiency</td>
+                    <td>Smaller engines use less fuel</td>
+                    <td>Improved fuel economy</td>
+                </tr>
+            
+                <tr>
+                    <td>Reduced Carbon-dioxide emissions</td>
+                    <td>Uses less fuel, therefore less carbon-dioxide is emitted.</td>
+                    <td>Reduced negative enviromental impact</td>
+                </tr>
+            </table>
+                
+            <table id="Disadvantages_Table">
+                    <caption>Table 2: Disadvantages of turbocharging</caption>
+            
+                <tr>
+                    <th>Disadvantage</th>
+                    <th>Explanation</th>
+                    <th>Impact</th>
+                </tr>
+                                
+                <tr>
+                   <td><b>Turbo lag</b></td>
+                    <td>A delay occurs between pressing the accelerator and the turbocharger producing sufficient boost pressure. This is because the turbine requires time to accelerate using exhaust gas energy.</td>
+                    <td>Slower engine response and delayed acceleration.</td>
+                </tr>
+            
+                <tr>
+                    <td><b>High operating temperatures</b></td>
+                    <td>The turbine is exposed to extremely hot exhaust gases, increasing the temperature of the turbocharger and surrounding components.</td>
+                    <td>Requires heat-resistant materials and effective cooling systems.</td>
+               </tr>
+            
+               <tr>
+                    <td><b>Increased mechanical stress</b></td>
+                    <td>Higher air and fuel intake can increase cylinder pressures, placing additional loads on engine components.</td>
+                    <td>Requires stronger and more durable engine components.</td>
+                </tr>
+            
+                <tr>
+                    <td><b>Increased cost and complexity</b></td>
+                    <td>Turbocharged engines require additional components, including the turbine, compressor, intercooler and associated pipework.</td>
+                    <td>Higher manufacturing, maintenance and repair costs.</td>
+               </tr>
+            </table>
+        </div>
+
         
     <h2 id="References">References</h2>
         <pre id="References_InText" class="ex1">
@@ -256,9 +301,10 @@
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AbstractCount = displayWordCount("Abstract_InText");
     const AnalysisCount = displayWordCount("Analysis_InText") + displayWordCount("Analysis_Table");
+    const DisadvantagesCount = displayWordCount("Disadvantages_Table");
     const ReferencesCount = displayWordCount("References_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AbstractCount + AnalysisCount + ReferencesCount;
+    const totalWordCount = IntroductionCount + AbstractCount + AnalysisCount + DisadvantagesCount + ReferencesCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
